@@ -1,0 +1,14 @@
+github.com/aws/aws-lambda-go v1.34.1 h1:M3a/uFYBjii+tDcOJ0wL/WyFi2550FHoECdPf27zvOs=
+github.com/aws/aws-lambda-go v1.34.1/go.mod h1:jwFe2KmMsHmffA1X2R09hH6lFzJQxzI8qK17ewzbQMM=
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/ipthomas/tukcnst v1.0.0 h1:1jI9uxBIBPgSBEw/FOmWEfZhRJ2eTXSElxu174oB/SQ=
+github.com/ipthomas/tukcnst v1.0.0/go.mod h1:ciOdJbw8hryjilsWjN0vhtF3ZbSfEKUd7wfzU0IZ2X8=
+github.com/ipthomas/tukint v0.0.0-20220829112831-34c487bc9380 h1:PYdfR9KQNWl1VhR8+TsxRgWJIQgBM4KNXqMW+K9ZrN0=
+github.com/ipthomas/tukint v0.0.0-20220829112831-34c487bc9380/go.mod h1:tAf4lZhFz//bBoHYPFeaAE7o9HO1xq+fhXFdhO3oYvo=
+github.com/ipthomas/tukutil v0.0.0-20220828202315-d2be5ab76313 h1:37EZwS9jVNYRJ4zgyF9AN458+wYaCw4iqBXLl3UIJls=
+github.com/ipthomas/tukutil v0.0.0-20220828202315-d2be5ab76313/go.mod h1:SRe4O0j2q9fnpN1W9d077JmHv4OiOHaXT2D6dUKBdBU=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
+github.com/stretchr/testify v1.7.2 h1:4jaiDzPyXQvSd7D0EjG45355tLlV3VOECpq10pLC+8s=
+gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
