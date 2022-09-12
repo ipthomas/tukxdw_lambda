@@ -1,4 +1,4 @@
-package tukxdw
+package main
 
 import (
 	"log"
@@ -27,10 +27,10 @@ func Handle_Request(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyR
 	return handle_Response(dsubmsg.NewDSUBBrokerEvent())
 }
 func handle_Response(err error) (*events.APIGatewayProxyResponse, error) {
-	resp := events.APIGatewayProxyResponse{Headers: tukint.SOAP_XML_Content_Type_EventHeaders(), MultiValueHeaders: map[string][]string{}, IsBase64Encoded: false}
+	resp := events.APIGatewayProxyResponse{Headers: tukint.SOAP_XML_Content_Type_EventHeaders, MultiValueHeaders: map[string][]string{}, IsBase64Encoded: false}
 	if err == nil {
 		resp.StatusCode = http.StatusOK
-		resp.Body = string(tukint.NewDSUBAcknowledgement())
+		resp.Body = string(tukint.NewDSUBAckMessage())
 	} else {
 		resp.StatusCode = http.StatusInternalServerError
 		resp.Body = err.Error()
