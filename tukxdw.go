@@ -30,7 +30,7 @@ func handle_Response(err error) (*events.APIGatewayProxyResponse, error) {
 	resp := events.APIGatewayProxyResponse{Headers: tukint.SOAP_XML_Content_Type_EventHeaders, MultiValueHeaders: map[string][]string{}, IsBase64Encoded: false}
 	if err == nil {
 		resp.StatusCode = http.StatusOK
-		resp.Body = string(tukint.NewDSUBAckMessage())
+		resp.Body = string(tukint.DSUB_ACK_TEMPLATE)
 	} else {
 		resp.StatusCode = http.StatusInternalServerError
 		resp.Body = err.Error()
