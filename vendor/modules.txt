@@ -20,15 +20,15 @@ github.com/ipthomas/tukdbint
 # github.com/ipthomas/tukdsub v0.0.0-20220912200745-d6fe8de26ddd
 ## explicit; go 1.19
 github.com/ipthomas/tukdsub
-# github.com/ipthomas/tukhttp v0.0.0-20220912193134-ffb1e7b0b02a
+# github.com/ipthomas/tukhttp v1.0.5
 ## explicit; go 1.19
 github.com/ipthomas/tukhttp
 # github.com/ipthomas/tukint v0.0.0-20220912193539-e78874d70725
 ## explicit; go 1.19
 github.com/ipthomas/tukint
-# github.com/ipthomas/tukpixm v0.0.0-20220913133946-812e83b97d1e
+# github.com/ipthomas/tukpixm v1.0.5
 ## explicit; go 1.19
 github.com/ipthomas/tukpixm
-# github.com/ipthomas/tukutil v0.0.0-20220912190241-6f399bf71d4b
+# github.com/ipthomas/tukutil v1.0.5
 ## explicit; go 1.19
 github.com/ipthomas/tukutil
