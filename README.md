@@ -1,10 +1,10 @@
 # tukxdw_lambda
 Example AWS Lambda imp  IHE XDW Content Creator, IHE XDW Content Consumer and IHE XDW Content Updator Actors
 
-Required external Web Services :-
-  IHE DSUB Broker
-  IHE PIXm
-  MySql DB - connection made using DSN or url.
+Requires external Services:-
+  IHE DSUB Broker WSE
+  IHE PIXm or PIXv3 or PDQv3 server WSE
+  MySql DB - connection made using DSN or if url provided by url.
 
 The IHE XDW profile utilises the WS OASIS Human Task standard for the definition of Cross Document Workflow owners, tasks, inputs, outputs, completion behaviours, etc.
 
