@@ -15,18 +15,19 @@ func main() {
 	lambda.Start(Handle_Request)
 }
 func Handle_Request(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	var err error
-	if wfdef, err := tukxdw.NewWorkflowDefinition(req.Body, nil); err == nil {
-		trans := tukxdw.XDWTransaction{
-			Action:             tukcnst.REGISTER,
-			WorkflowDefinition: wfdef,
-			Pathway:            wfdef.Ref,
-			DSUB_BrokerURL:     os.Getenv(tukcnst.AWS_ENV_DSUB_BROKER_URL),
-			DSUB_ConsumerURL:   os.Getenv(tukcnst.AWS_ENV_DSUB_CONSUMER_URL),
+	trans := tukxdw.XDWTransaction{DSUB_BrokerURL: os.Getenv(tukcnst.AWS_ENV_DSUB_BROKER_URL), DSUB_ConsumerURL: os.Getenv(tukcnst.AWS_ENV_DSUB_CONSUMER_URL)}
+	switch req.QueryStringParameters[tukcnst.QUERY_PARAM_ACTION] {
+	case tukcnst.REGISTER:
+		if wfdef, err := tukxdw.NewWorkflowDefinition(req.Body, nil); err == nil {
+			trans.Action = tukcnst.REGISTER
+			trans.WorkflowDefinition = wfdef
+			trans.Pathway = wfdef.Ref
 		}
-		tukxdw.New_Transaction(&trans)
+	case tukcnst.XDW_CONTENT_CONSUMER:
+		trans.Action = tukcnst.XDW_CONTENT_CONSUMER
+		trans.Pathway = req.QueryStringParameters[tukcnst.QUERY_PARAM_PATHWAY]
 	}
-	return handle_Response(err)
+	return handle_Response(tukxdw.New_Transaction(&trans))
 }
 func handle_Response(err error) (*events.APIGatewayProxyResponse, error) {
 	resp := events.APIGatewayProxyResponse{}
